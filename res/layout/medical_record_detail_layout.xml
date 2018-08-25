@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff3f4f5"
+        android:orientation="vertical" >
+
+        <com.apricotforest.dossier.views.TopBarView
+            android:id="@id/top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip" />
+
+        <ListView
+            android:id="@id/note_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="20.0dip"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="70.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:paddingTop="16.0dip" >
+
+        <TextView
+            android:id="@id/add_note"
+            android:layout_width="0.0dip"
+            android:layout_height="38.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/detail_add_note_selector"
+            android:gravity="center"
+            android:text="@string/add_chart_timeline"
+            android:textColor="#ffffffff"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@id/start_followup"
+            android:layout_width="0.0dip"
+            android:layout_height="38.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/detail_followup_selector"
+            android:gravity="center"
+            android:text="@string/start_followup"
+            android:textColor="#ffffffff"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+</RelativeLayout>

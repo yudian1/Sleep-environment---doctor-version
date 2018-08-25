@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@id/search_title"
+        layout="@layout/search_top_bar_layout" />
+
+    <ListView
+        android:id="@id/search_patient_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/search_title"
+        android:layout_marginBottom="8.0dip"
+        android:cacheColorHint="#00000000"
+        android:divider="#ffe8e8df"
+        android:dividerHeight="0.20000005dip"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="true"
+        android:listSelector="#00000000"
+        android:scrollingCache="false" />
+
+    <LinearLayout
+        android:id="@id/followup_search_patient_default"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_title"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@id/search_patient_default_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60.0dip"
+            android:text="@string/no_search_patient_result"
+            android:textColor="#ff87acda"
+            android:textSize="18.0sp" />
+
+        <ImageView
+            android:layout_width="120.0dip"
+            android:layout_height="120.0dip"
+            android:src="@drawable/search_patient_default" />
+    </LinearLayout>
+
+</RelativeLayout>

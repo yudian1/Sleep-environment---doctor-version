@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/page_title"
+        android:layout_width="fill_parent" >
+
+        <Button
+            android:id="@+id/back_btn"
+            style="@style/back_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/tv_show_bv_week_time"
+            style="@style/page_title_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="患者信息"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/music_select"
+                style="@style/button_style"
+                android:layout_width="@dimen/page_title_height"
+                android:layout_height="@dimen/page_title_height"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/title_btn_more" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/patient_info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingBottom="20.0dip"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:paddingTop="14.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/patient_detail_name"
+                android:textColor="#ff888888"
+                android:textSize="16.0sp" />
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@id/arrow"
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/finish"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/patient_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.0dip"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="#ff444444"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/patient_detail_contact_telephone"
+                android:textColor="#ff888888"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@id/patient_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:text=""
+                android:textColor="#ff547eff"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/other_patient_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/patient_detail_age"
+                    android:textColor="#ff888888"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@id/patient_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text=""
+                    android:textColor="#ff444444"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/patient_detail_job"
+                    android:textColor="#ff888888"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@id/patient_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text=""
+                    android:textColor="#ff444444"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/patient_detail_scade"
+                    android:textColor="#ff888888"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@id/patient_scade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text=""
+                    android:textColor="#ff444444"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/patient_detail_insomnia"
+                    android:textColor="#ff888888"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@id/patient_insomnia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text=""
+                    android:textColor="#ff444444"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/patient_detail_mhistory"
+                    android:textColor="#ff888888"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@id/patient_mhistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text=""
+                    android:textColor="#ff444444"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/patient_detail_contact_said"
+                    android:textColor="#ff888888"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@id/patient_said"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text=""
+                    android:textColor="#ff547eff"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@id/switch_button"
+            android:layout_width="fill_parent"
+            android:layout_height="36.0dip"
+            android:layout_marginTop="1.0dip"
+            android:background="@drawable/touch_bg"
+            android:gravity="center"
+            android:text="@string/show_more" />
+
+        <FrameLayout
+            android:id="@id/tag_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip" >
+
+            <LinearLayout
+                android:id="@id/tag_root_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:orientation="vertical"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip"
+                    android:text="@string/common_tag"
+                    android:textColor="#ff888888"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/tag_title"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@drawable/touch_bg"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="center_vertical"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:text="@string/add_tag"
+                android:textColor="#ff444444"
+                android:textSize="16.0sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@id/diagnose_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip" >
+
+            <LinearLayout
+                android:id="@id/diagnose_root_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:orientation="vertical"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip"
+                    android:text="@string/common_diagnose"
+                    android:textColor="#ff888888"
+                    android:textSize="14.0sp" />
+
+                <LinearLayout
+                    android:id="@id/diagnose_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/diagnose_title"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@drawable/touch_bg"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="center_vertical"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:text="@string/add_diagnose"
+                android:textColor="#ff444444"
+                android:textSize="16.0sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@id/basic_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip" >
+
+            <LinearLayout
+                android:id="@id/basic_info_root_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:orientation="vertical"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip"
+                    android:text="@string/patient_detail_basic_information"
+                    android:textColor="#ff888888"
+                    android:textSize="14.0sp" />
+
+                <LinearLayout
+                    android:id="@id/basic_info_content_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10.0dip" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/basic_information_title"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@drawable/touch_bg"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="center_vertical"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:text="@string/patient_detail_basic_information"
+                android:textColor="#ff444444"
+                android:textSize="16.0sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@id/list_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@id/list_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5.0dip"
+                android:orientation="horizontal" >
+
+                <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Small.Inverse"
+                    android:layout_width="15.0dip"
+                    android:layout_height="15.0dip"
+                    android:layout_marginRight="10.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/note_list_loading"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/list_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:gravity="center_horizontal"
+                    android:text="@string/note_list_title"
+                    android:textColor="@color/black"
+                    android:textSize="20.0sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="14.0dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/sort_asc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10.0dip"
+                        android:text="@string/oldest_on_top"
+                        android:textColor="#ffbbbbbb"
+                        android:textSize="14.0sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/divider" />
+
+                    <TextView
+                        android:id="@id/sort_desc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10.0dip"
+                        android:text="@string/latest_on_top"
+                        android:textColor="#ffbbbbbb"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_window_focused="false" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:drawable="@color/white" />
+    <item android:state_focused="true" android:state_pressed="true" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:drawable="@color/index_list_up" />
+    <item android:state_focused="false" android:state_pressed="true" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:drawable="@color/index_list_up" />
+    <item android:state_selected="true" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:drawable="@color/index_list_up" />
+    <item android:state_focused="true" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:drawable="@color/index_list_up" />
+</selector>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="33.0dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/followup_link_record_search_bg"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/followup_search_patient_background" />
+
+        <EditText
+            android:id="@id/search_top_bar_editText"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="4.0dip"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:ems="7"
+            android:hint="@string/search_record_by_name_and_diagnose"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/top_bar_text"
+            android:textColorHint="@color/search_top_bar_hint_text"
+            android:textSize="14.0sp" />
+
+        <ImageView
+            android:id="@id/search_top_bar_clear_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="8.0dip"
+            android:background="@drawable/search_top_bar_cancel"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/search_top_bar_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="10.0dip"
+        android:gravity="center"
+        android:padding="5.0dip"
+        android:text="@string/cancel_dialog_cancel_button"
+        android:textColor="@drawable/title_bar_text_color"
+        android:textSize="16.0sp" />
+
+</LinearLayout>

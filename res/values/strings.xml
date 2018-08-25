@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="app_name">医生客户端</string>
+    <string name="search_bar_hint">搜索</string>
+    <string name="hint_patient_sex">患者性别</string>
+    <string name="hint_collaboration">病历协作</string>
+    <string name="patient_detail_female">女</string>
+    <string name="patient_detail_id_number">身份证号</string>
+    <string name="patient_detail_introduce_name">介绍人</string>
+    <string name="patient_detail_job">患者职业</string>
+    <string name="patient_detail_scade">文化程度</string>
+    <string name="patient_detail_insomnia">失眠时间</string>
+    <string name="patient_detail_mhistory">既往史</string>
+    <string name="patient_detail_male">男</string>
+    <string name="patient_detail_name">姓名</string>
+    <string name="patient_detail_age">年龄</string>
+    <string name="patient_detail_basic_information">基本病情</string>
+    <string name="patient_detail_contact_address">地址</string>
+    <string name="patient_detail_contact_email">邮箱</string>
+    <string name="patient_detail_contact_name">患者联系人</string>
+    <string name="patient_detail_contact_phone">固定电话</string>
+    <string name="patient_detail_contact_telephone">手机号</string>
+    <string name="patient_detail_contact_said">主诉</string>
+    <string name="show_more">查看更多</string>
+    <string name="show_less">收起</string>
+    <string name="common_tag">标签</string>
+    <string name="add_tag">添加标签</string>
+    <string name="common_diagnose">诊断</string>
+    <string name="add_diagnose">添加诊断</string>
+    <string name="note_list_loading">正在加载病程…</string>
+    <string name="note_list_title">患者病程</string>
+    <string name="oldest_on_top">最早病程置顶</string>
+    <string name="latest_on_top">近期病程置顶</string>
+    <string name="start_followup">开始随访</string>
+    <string name="add_chart_timeline">添加病程</string>
+    <string name="search_record_by_name_and_diagnose">按姓名/诊断等搜索病历</string>
+    <string name="cancel_dialog_cancel_button">取消</string>
+    <string name="no_search_patient_result">没有找到“%s”相关患者</string>
+    <string name="back_btn">返回</string>
+
+</resources>
